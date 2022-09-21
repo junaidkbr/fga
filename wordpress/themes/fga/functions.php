@@ -54,6 +54,11 @@ add_action( 'wp_enqueue_scripts', 'fga_enqueue_assets' );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Custom functions for FGA
+ */
+require get_template_directory() . '/inc/custom-functions.php';
+
+/**
  * Changes ACF Save-JSON directory
  *
  * @param  String $path Default ACF JSON directory

@@ -18,7 +18,7 @@
   <header id="site-header" class="header">
     <div class="header__wrapper">
       <span class="header__logo-wrapper">
-        <img class="header__logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Federal Government Advisors">
+        <?php fga_render_logo(); ?>
       </span>
 
       <?php if ( have_rows( 'header_badges', 'option' ) ) : ?>

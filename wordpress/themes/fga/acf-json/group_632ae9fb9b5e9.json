@@ -19,6 +19,30 @@
             "endpoint": 0
         },
         {
+            "key": "field_632b03b4bb1b1",
+            "label": "Logo",
+            "name": "header_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_632aeb1791802",
             "label": "Badges",
             "name": "header_badges",
@@ -80,6 +104,30 @@
             "endpoint": 0
         },
         {
+            "key": "field_632b03c496938",
+            "label": "Logo",
+            "name": "footer_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_632aede96ca8a",
             "label": "Copyright Notice",
             "name": "footer_copyright_notice",
@@ -136,5 +184,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663758183
+    "modified": 1663763409
 }
