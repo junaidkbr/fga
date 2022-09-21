@@ -43,5 +43,20 @@ function fga_enqueue_assets() {
 
 	wp_enqueue_style( 'fga', get_stylesheet_directory_uri() . '/assets/css/styles.css', array(), $theme_version );
 }
-
 add_action( 'wp_enqueue_scripts', 'fga_enqueue_assets' );
+
+/**
+ * Custom template tags for FGA
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Changes ACF JSON directory
+ *
+ * @param  String $path Default ACF JSON directory
+ * @return String Modified ACF JSON directory path
+ */
+function fga_acf_json_directory( $path ) {
+	return get_stylesheet_directory() . '/acf-json';
+}
+add_filter( 'acf/settings/save_json', 'fga_acf_json_directory' );
