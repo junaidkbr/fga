@@ -4,7 +4,7 @@
  * Sets up theme defaults and registers support for various WordPress features.
  *
  */
-function fag_theme_setup() {
+function fga_theme_setup() {
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 */
@@ -33,15 +33,15 @@ function fag_theme_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'fag_theme_setup' );
+add_action( 'after_setup_theme', 'fga_theme_setup' );
 
 /**
  * Enqueue Styles and Scripts.
  */
-function fag_enqueue_assets() {
+function fga_enqueue_assets() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'fag', get_stylesheet_directory_uri() . '/assets/css/styles.css', array(), $theme_version );
+	wp_enqueue_style( 'fga', get_stylesheet_directory_uri() . '/assets/css/styles.css', array(), $theme_version );
 }
 
-add_action( 'wp_enqueue_scripts', 'fag_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'fga_enqueue_assets' );
