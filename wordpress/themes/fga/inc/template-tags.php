@@ -44,14 +44,13 @@ function fga_section_id() {
 /**
  * Custom ACF Field Wrapper
  *
- * @param  String $name         Name of the ACF field
- * @param  String $before       HTML Markup before the field
- * @param  String $after        HTML Markup after the field
- * @param  Boolean $sub_field   If the field is subfield
- * @param  Boolean $option      If the field is an option
+ * @param String $name         Name of the ACF field
+ * @param String $before       HTML Markup before the field
+ * @param String $after        HTML Markup after the field
+ * @param Boolean $sub_field   If the field is subfield
+ * @param Boolean $option      If the field is an option
  */
-function fga_the_field( $name = false, $before = '', $after = '', $sub_field = false, $option = false )
-{
+function fga_the_field( $name = false, $before = '', $after = '', $sub_field = false, $option = false ) {
   if ( ! $name ) {
     return;
   }
@@ -74,5 +73,37 @@ function fga_the_field( $name = false, $before = '', $after = '', $sub_field = f
 
   if ( ! empty( $output ) ) {
     echo $before . do_shortcode( $output ) . $after;
+  }
+}
+
+/**
+ * Prints an anchor tag from provided input
+ *
+ * @param Array   $link         Link array
+ * @param String  $css_class    CSS classes
+ * @param String  $target       Target attribute
+ * @param String  $before       HTML Markup before
+ * @param String  $after        HTML Markup after
+ * @param String  $attributes   Custom HTML Attributes
+ */
+function fga_the_link( $link = array(),  $css_classes = '', $target = '', $before = '', $after = '', $attributes = '' ) {
+  if ( ! is_array( $link ) || ! count( $link ) ) {
+    return;
+  }
+
+  $output = '';
+
+  if ( ! empty( $target ) ) {
+    $link['target'] = $target;
+  }
+
+  if ( ! strpos( $attributes, 'aria-label' ) ) {
+    $attributes .= ' aria-label="' . wp_sprintf( __( 'Open for %s', 'fga' ), strip_tags( $link['url'] ) ) . '"';
+  }
+
+  $output .= "<a href=\"{$link['url']}\" class=\"{$css_classes}\" target=\"{$link['target']}\" {$attributes}>{$link['title']}</a>";
+
+  if ( ! empty( $output ) ) {
+    echo $before . $output . $after;
   }
 }
