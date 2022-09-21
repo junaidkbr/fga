@@ -21,10 +21,20 @@
         <img class="header__logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.svg" alt="Federal Government Advisors">
       </span>
 
-      <span class="header__badges">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/trust.svg" alt="Trust Pilot">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/google.svg" alt="Google">
-      </span>
+      <?php if ( have_rows( 'header_badges', 'option' ) ) : ?>
+        <span class="header__badges">
+          <?php
+            while ( have_rows( 'header_badges', 'option' ) ) :
+              the_row();
+
+              $attachment_id = get_sub_field( 'badge' );
+              $src = wp_get_attachment_image_url( $attachment_id, 'header-badge' );
+              $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', TRUE );
+          ?>
+            <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
+          <?php endwhile; ?>
+        </span>
+      <?php endif; ?>
     </div>
   </header>
 
