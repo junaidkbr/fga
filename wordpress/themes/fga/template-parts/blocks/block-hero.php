@@ -5,7 +5,7 @@
     get_sub_field( 'section_classes' )
   ];
 ?>
-<section <?php fga_section_id(); ?> class="<?php echo implode( ' ', $section_class ); ?>">
+<section <?php fga_section_id(); ?> class="<?php echo trim( implode( ' ', $section_class ) ); ?>">
   <?php if ( get_sub_field( 'subheading' ) || get_sub_field( 'heading' ) ) : ?>
     <h1 class="page-welcome-title__heading">
       <?php

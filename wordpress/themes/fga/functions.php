@@ -34,7 +34,8 @@ function fga_theme_setup() {
 	);
 
   // Custom image sizes
-  add_image_size('header-badge', 9999, 57 );
+  add_image_size( 'header-badge', 9999, 57 );
+  add_image_size( 'banner-background', 1680, 99999 );
 }
 add_action( 'after_setup_theme', 'fga_theme_setup' );
 
