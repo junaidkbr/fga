@@ -47,7 +47,9 @@ function fga_enqueue_assets() {
 
 	wp_enqueue_style( 'fga', get_stylesheet_directory_uri() . '/assets/css/styles.css', array(), $theme_version );
 
-  wp_enqueue_script( 'business-form', get_stylesheet_directory_uri() . '/assets/js/business-form.js', array( 'jquery' ), $theme_version, true );
+  wp_deregister_script( 'jquery' );
+
+  wp_enqueue_script( 'business-form', get_stylesheet_directory_uri() . '/assets/js/business-form.js', array(), $theme_version, true );
   wp_localize_script( 'business-form', 'fga_ajax', array(
     'ajax_url'  => admin_url( 'admin-ajax.php' ),
     'nonce'     => wp_create_nonce( 'business-form-submission' ),
@@ -172,7 +174,7 @@ if ( function_exists( 'acf_add_options_sub_page' ) ) {
  */
 function fga_ajax_business_form() {
   check_ajax_referer( 'business-form-submission', 'security' );
-  $data = $_REQUEST['data'];
+  $data = json_decode( html_entity_decode( stripslashes ( $_REQUEST['data'] ) ), true );
 
   // Collect post data
   $post_data = array(

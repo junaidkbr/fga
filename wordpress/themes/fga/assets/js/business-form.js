@@ -1,4 +1,4 @@
-(function() {
+(function () {
   const forms = document.querySelectorAll('[data-contact-form]');
 
   if (!forms.length) {
@@ -8,21 +8,25 @@
   forms.forEach(form => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      const data = Object.fromEntries(new FormData(event.target).entries());
+      const data = new FormData();
 
-      jQuery.post(fga_ajax.ajax_url, {
-        security: fga_ajax.nonce,
-        action: 'business_form',
-        data: data
-      }, (response) => {
+      data.append('security', fga_ajax.nonce);
+      data.append('action', 'business_form');
+      data.append('data', JSON.stringify(Object.fromEntries(new FormData(event.target).entries())));
+
+      fetch(fga_ajax.ajax_url, {
+        method: 'POST',
+        credentials: 'same-origin',
+        body: data
+      }).then(res => {
         // Redirect, if available
         const redirectUrl = event.target.dataset.redirectUrl;
 
         if (redirectUrl) {
           window.location = redirectUrl;
         }
-      }).fail((error) => {
-        console.error('Failed submitting business.');
+      }).catch((error) => {
+        console.error(error);
       });
     });
   });
