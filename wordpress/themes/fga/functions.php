@@ -136,6 +136,7 @@ function fga_ajax_business_form() {
   }
 
   // Insert custom fields
+  update_field( 'status', 'active', $post_id );
   update_field( 'first_name', $data[ 'first-name' ], $post_id );
   update_field( 'last_name', $data[ 'last-name' ], $post_id );
   update_field( 'business_name', $data[ 'business-name' ], $post_id );

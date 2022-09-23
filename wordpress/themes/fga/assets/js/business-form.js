@@ -15,8 +15,12 @@
         action: 'business_form',
         data: data
       }, (response) => {
-        // Clears form data
-        event.target.reset();
+        // Redirect, if available
+        const redirectUrl = event.target.dataset.redirectUrl;
+
+        if (redirectUrl) {
+          window.location = redirectUrl;
+        }
       }).fail((error) => {
         console.error('Failed submitting business.');
       });

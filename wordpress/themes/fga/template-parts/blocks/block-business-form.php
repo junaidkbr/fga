@@ -8,7 +8,7 @@ $section_class = [
 <section <?php fga_section_id(); ?> class="<?php echo trim(implode(' ', $section_class)); ?>">
   <?php fga_the_field('heading', '<h2 class="contact-us__heading">', '</h2>', true); ?>
 
-  <form action="" method="post" class="wpcf7-form init" data-contact-form="">
+  <form action="" method="post" class="wpcf7-form init" data-contact-form="" data-redirect-url="<?php the_sub_field( 'redirect_url' ); ?>">
     <p>
       <label class="contact-form__label">
         <span id="label-first-name"><?php _e( 'First Name', 'fga' ); ?></span><br>
@@ -57,7 +57,6 @@ $section_class = [
 
     <div class="full-row">
       <input type="submit" value="<?php _e( 'Submit', 'fga' ); ?>" class="wpcf7-form-control has-spinner wpcf7-submit"><span class="wpcf7-spinner"></span>
-      <p class="wpcf7-success">Business successfully submitted.</p>
     </div>
   </form>
 </section>
