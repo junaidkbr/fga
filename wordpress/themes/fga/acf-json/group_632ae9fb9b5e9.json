@@ -132,7 +132,7 @@
             "label": "Copyright Notice",
             "name": "footer_copyright_notice",
             "type": "text",
-            "instructions": "",
+            "instructions": "Use &lt;code&gt;[year]&lt;\/code&gt; for current year.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -184,5 +184,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663763409
+    "modified": 1663930745
 }
