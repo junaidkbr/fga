@@ -19,7 +19,7 @@
   ?>
     <div class="reg-choices__new">
       <?php if ( $icon_id ) : ?>
-        <img class="reg-choices__image" src="<?php echo $icon_src; ?>" alt="<?php echo $icon_alt; ?>">
+        <img class="reg-choices__image" src="<?php echo $icon_src; ?>" alt="<?php echo $icon_alt; ?>" width="90" height="90">
       <?php endif; ?>
 
       <?php
