@@ -18,10 +18,10 @@ $businesses = new WP_Query( array(
     <table class="sam-search__table">
       <thead class="sam-search__thead">
         <tr class="sam-search__tr">
-          <th class="sam-search__th">Status</th>
-          <th class="sam-search__th">Business Name</th>
-          <th class="sam-search__th">CAGE</th>
-          <th class="sam-search__th">DUNS</th>
+          <th class="sam-search__th"><?php _e( 'Status', 'fga' ); ?></th>
+          <th class="sam-search__th"><?php _e( 'Business Name', 'fga' ); ?></th>
+          <th class="sam-search__th"><?php _e( 'CAGE', 'fga' ); ?></th>
+          <th class="sam-search__th"><?php _e( 'DUNS', 'fga' ); ?></th>
           <th class="sam-search__th"></th>
         </tr>
       </thead>
