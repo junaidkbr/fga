@@ -6,7 +6,7 @@
 
       <hr class="help-box__seperator">
 
-      <p class="page-welcome-title__paragraph narrow text-xs"><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'fga' ); ?></p>
+      <p class="page-welcome-title__paragraph narrow text-xs"><?php _e( 'The page you were looking for could not be found.<br>It might have been removed, renamed, or did not exist in the first place.', 'fga' ); ?></p>
     </section>
   </div>
 

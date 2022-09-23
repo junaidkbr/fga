@@ -5,7 +5,7 @@
 ?>
 <?php get_header(); ?>
 
-  <div class="content-wrapper__column">
+  <div class="content-wrapper__column <?php the_field( 'wrapper_classes' ); ?>">
     <?php fga_render_acf_blocks(); ?>
   </div>
 

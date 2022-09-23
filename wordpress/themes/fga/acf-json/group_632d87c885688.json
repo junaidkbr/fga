@@ -1,0 +1,44 @@
+{
+    "key": "group_632d87c885688",
+    "title": "Page Options",
+    "fields": [
+        {
+            "key": "field_632d87d1f86a9",
+            "label": "Wrapper Classes",
+            "name": "wrapper_classes",
+            "type": "text",
+            "instructions": "Comma separated CSS classes assigned to the page wrapper.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1663928292
+}

@@ -262,6 +262,146 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_632c7e6fa0b15": {
+                    "key": "layout_632c7e6fa0b15",
+                    "name": "business_form",
+                    "label": "Business Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_632c7e6fa0b16",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_632d851865f64",
+                            "label": "Redirect URL",
+                            "name": "redirect_url",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_632d820fd685b": {
+                    "key": "layout_632d820fd685b",
+                    "name": "business_listing",
+                    "label": "Business Listing",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_632d820fd685c",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_632d863bc8e00": {
+                    "key": "layout_632d863bc8e00",
+                    "name": "thank_you",
+                    "label": "Thank You",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_632d863bc8e01",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_632d864bc8e02",
+                            "label": "Subheading",
+                            "name": "subheading",
+                            "type": "text",
+                            "instructions": "In red color, above the heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_632d8660c8e03",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -278,7 +418,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -289,5 +429,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663842580
+    "modified": 1663928317
 }
