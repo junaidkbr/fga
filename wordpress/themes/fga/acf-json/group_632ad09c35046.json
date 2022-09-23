@@ -18,8 +18,8 @@
             "layouts": {
                 "layout_632ae5c76f695": {
                     "key": "layout_632ae5c76f695",
-                    "name": "hero",
-                    "label": "Hero",
+                    "name": "text",
+                    "label": "Text",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -193,8 +193,8 @@
                 },
                 "layout_632c38e4e9e9f": {
                     "key": "layout_632c38e4e9e9f",
-                    "name": "banner",
-                    "label": "Banner",
+                    "name": "cta",
+                    "label": "CTA",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -429,5 +429,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663928317
+    "modified": 1663930357
 }

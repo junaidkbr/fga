@@ -71,6 +71,11 @@ require get_template_directory() . '/inc/custom-functions.php';
 require get_template_directory() . '/inc/custom-post-types/init.php';
 
 /**
+ * Shortcodes
+ */
+require get_template_directory() . '/inc/shortcodes/init.php';
+
+/**
  * Changes ACF Save-JSON directory
  *
  * @param  String $path Default ACF JSON directory
