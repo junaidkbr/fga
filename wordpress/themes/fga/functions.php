@@ -160,7 +160,7 @@ add_filter( 'acf/settings/save_json', 'fga_acf_json_save_directory' );
  */
 function fga_acf_json_load_directory( $paths ) {
 	unset( $paths[0] );
-	$paths[] = get_stylesheet_directory() . '/inc/acf-json';
+	$paths[] = get_stylesheet_directory() . '/acf-json';
 
 	return $paths;
 }
